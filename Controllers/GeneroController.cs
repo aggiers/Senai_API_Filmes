@@ -9,6 +9,7 @@ namespace api_filmes_senai.Controllers
     [Route("api/[controller]")]
     [ApiController]
     [Produces("application/json")]
+    [Authorize]
     public class GeneroController : ControllerBase
     {
         private readonly IGeneroRepository _generoRepository;
@@ -41,7 +42,7 @@ namespace api_filmes_senai.Controllers
         /// <summary>
         /// Endpoint para postar novos Gêneros
         /// </summary>
-        /// <param name="novoGenero"> Id do Gênero buscado </param>
+        /// <param name="novoGenero"></param>
         /// <returns> genero buscado </returns>
         /// 
         [HttpPost]

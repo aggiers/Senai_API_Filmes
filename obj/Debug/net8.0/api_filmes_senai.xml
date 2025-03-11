@@ -4,6 +4,51 @@
         <name>api_filmes_senai</name>
     </assembly>
     <members>
+        <member name="M:api_filmes_senai.Controllers.FilmeController.Get">
+            <summary>
+            Endpoint para listar todos os Filmes
+            </summary>
+            <param name=""></param>
+            <returns></returns>
+            
+        </member>
+        <member name="M:api_filmes_senai.Controllers.FilmeController.Post(api_filmes_senai.Domains.Filme)">
+            <summary>
+            Endpoint para postar novos Filmes
+            </summary>
+            <param name="novoFilme"></param>
+            <returns> filme buscado </returns>
+            
+        </member>
+        <member name="M:api_filmes_senai.Controllers.FilmeController.GetById(System.Guid)">
+            <summary>
+            Endpoint para buscar um Filme pelo seu Id
+            </summary>
+            <param name="id"> Id do Filme buscado </param>
+            <returns> filme buscado </returns>
+        </member>
+        <member name="M:api_filmes_senai.Controllers.FilmeController.Delete(System.Guid)">
+            <summary>
+            Endpoint para deletar um Filme pelo seu Id
+            </summary>
+            <param name="id"> Id do Filme buscado </param>
+            <returns> filme buscado </returns>
+        </member>
+        <member name="M:api_filmes_senai.Controllers.FilmeController.Put(System.Guid,api_filmes_senai.Domains.Filme)">
+            <summary>
+            Endpoint para atualizar um Filme pelo seu Id
+            </summary>
+            <param name="id"> id do Filme buscado </param>
+            <param name="filme"> Nome do Filme buscado </param>
+            <returns> genero buscado </returns>
+        </member>
+        <member name="M:api_filmes_senai.Controllers.FilmeController.ListarPorGenero(System.Guid)">
+            <summary>
+            Endpoint para listar Filmes pelo Gênero
+            </summary>
+            <param name="idGenero"> id do Genero buscado </param>
+            <returns></returns>
+        </member>
         <member name="M:api_filmes_senai.Controllers.GeneroController.Get">
             <summary>
             Endpoint para listar todos os Gêneros
@@ -16,7 +61,7 @@
             <summary>
             Endpoint para postar novos Gêneros
             </summary>
-            <param name="novoGenero"> Id do Gênero buscado </param>
+            <param name="novoGenero"></param>
             <returns> genero buscado </returns>
             
         </member>

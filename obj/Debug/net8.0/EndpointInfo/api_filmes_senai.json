@@ -20,6 +20,7 @@
         "tags": [
           "Filme"
         ],
+        "summary": "Endpoint para listar todos os Filmes",
         "responses": {
           "200": {
             "description": "OK"
@@ -30,7 +31,9 @@
         "tags": [
           "Filme"
         ],
+        "summary": "Endpoint para postar novos Filmes",
         "requestBody": {
+          "description": "",
           "content": {
             "application/json": {
               "schema": {
@@ -61,10 +64,12 @@
         "tags": [
           "Filme"
         ],
+        "summary": "Endpoint para buscar um Filme pelo seu Id",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "Id do Filme buscado",
             "required": true,
             "schema": {
               "type": "string",
@@ -84,10 +89,12 @@
         "tags": [
           "Filme"
         ],
+        "summary": "Endpoint para deletar um Filme pelo seu Id",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "Id do Filme buscado",
             "required": true,
             "schema": {
               "type": "string",
@@ -105,10 +112,12 @@
         "tags": [
           "Filme"
         ],
+        "summary": "Endpoint para atualizar um Filme pelo seu Id",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "id do Filme buscado",
             "required": true,
             "schema": {
               "type": "string",
@@ -117,6 +126,7 @@
           }
         ],
         "requestBody": {
+          "description": "Nome do Filme buscado",
           "content": {
             "application/json": {
               "schema": {
@@ -147,10 +157,12 @@
         "tags": [
           "Filme"
         ],
+        "summary": "Endpoint para listar Filmes pelo Gênero",
         "parameters": [
           {
             "name": "idGenero",
             "in": "path",
+            "description": "id do Genero buscado",
             "required": true,
             "schema": {
               "type": "string",
@@ -183,7 +195,7 @@
         ],
         "summary": "Endpoint para postar novos Gêneros",
         "requestBody": {
-          "description": "Id do Gênero buscado",
+          "description": "",
           "content": {
             "application/json": {
               "schema": {
@@ -478,6 +490,19 @@
         },
         "additionalProperties": false
       }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "apiKey",
+        "description": "Value: Bearer TokenJWT ",
+        "name": "Authorization",
+        "in": "header"
+      }
     }
-  }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
 }
