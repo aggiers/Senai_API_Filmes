@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>api_filmes_senai</name>
+    </assembly>
+    <members>
+        <member name="M:api_filmes_senai.Controllers.GeneroController.Get">
+            <summary>
+            Endpoint para listar todos os Gêneros
+            </summary>
+            <param name=""></param>
+            <returns></returns>
+            
+        </member>
+        <member name="M:api_filmes_senai.Controllers.GeneroController.Post(api_filmes_senai.Domains.Genero)">
+            <summary>
+            Endpoint para postar novos Gêneros
+            </summary>
+            <param name="novoGenero"> Id do Gênero buscado </param>
+            <returns> genero buscado </returns>
+            
+        </member>
+        <member name="M:api_filmes_senai.Controllers.GeneroController.GetById(System.Guid)">
+            <summary>
+            Endpoint para buscar um Gênero pelo seu Id
+            </summary>
+            <param name="id"> Id do Gênero buscado </param>
+            <returns> genero buscado </returns>
+        </member>
+        <member name="M:api_filmes_senai.Controllers.GeneroController.Delete(System.Guid)">
+            <summary>
+            Endpoint para deletar um Gênero pelo seu Id
+            </summary>
+            <param name="id"> Id do Gênero buscado </param>
+            <returns> genero buscado </returns>
+        </member>
+        <member name="M:api_filmes_senai.Controllers.GeneroController.Put(System.Guid,api_filmes_senai.Domains.Genero)">
+            <summary>
+            Endpoint para atualizar um Gênero pelo seu Id
+            </summary>
+            <param name="id"> id do genero buscado </param>
+            <param name="genero"> Nome do Gênero buscado </param>
+            <returns> genero buscado </returns>
+        </member>
+        <member name="T:api_filmes_senai.Migrations.Db_Context">
+            <inheritdoc />
+        </member>
+        <member name="M:api_filmes_senai.Migrations.Db_Context.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:api_filmes_senai.Migrations.Db_Context.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:api_filmes_senai.Migrations.Db_Context.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:api_filmes_senai.Migrations.Db_Filmes_V2">
+            <inheritdoc />
+        </member>
+        <member name="M:api_filmes_senai.Migrations.Db_Filmes_V2.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:api_filmes_senai.Migrations.Db_Filmes_V2.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:api_filmes_senai.Migrations.Db_Filmes_V2.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>
