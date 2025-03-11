@@ -2,6 +2,7 @@
 using api_filmes_senai.Domains;
 using api_filmes_senai.Interfaces;
 using api_filmes_senai.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,6 +11,8 @@ namespace api_filmes_senai.Controllers
     [Route("api/[controller]")]
     [ApiController]
     [Produces("application/json")]
+    [Authorize]
+
     public class FilmeController : ControllerBase
     {
         private readonly IFilmeRepository _filmeRepository;
@@ -46,6 +49,7 @@ namespace api_filmes_senai.Controllers
         /// <returns> filme buscado </returns>
         /// 
         [HttpPost]
+        [Authorize]
         public IActionResult Post(Filme novoFilme)
         {
             try
@@ -89,6 +93,7 @@ namespace api_filmes_senai.Controllers
         /// <param name="id"> Id do Filme buscado </param>
         /// <returns> filme buscado </returns>
         [HttpDelete("{id}")]
+        [Authorize]
         public IActionResult Delete(Guid id)
         {
             try
@@ -110,6 +115,7 @@ namespace api_filmes_senai.Controllers
         /// <param name="filme"> Nome do Filme buscado </param>
         /// <returns> genero buscado </returns>
         [HttpPut("{id}")]
+        [Authorize]
         public IActionResult Put(Guid id, Filme filme)
         {
             try

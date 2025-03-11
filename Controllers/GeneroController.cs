@@ -46,6 +46,7 @@ namespace api_filmes_senai.Controllers
         /// <returns> genero buscado </returns>
         /// 
         [HttpPost]
+        [Authorize]
         public IActionResult Post(Genero novoGenero)
         {
             try
@@ -91,6 +92,7 @@ namespace api_filmes_senai.Controllers
         /// <param name="id"> Id do Gênero buscado </param>
         /// <returns> genero buscado </returns>
         [HttpDelete("{id}")]
+        [Authorize]
         public IActionResult Delete(Guid id)
         {
             try
@@ -112,6 +114,7 @@ namespace api_filmes_senai.Controllers
         /// <param name="genero"> Nome do Gênero buscado </param>
         /// <returns> genero buscado </returns>
         [HttpPut("{id}")]
+        [Authorize]
         public IActionResult Put(Guid id, Genero genero)
         {
             try
